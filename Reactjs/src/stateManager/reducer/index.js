@@ -95,6 +95,28 @@ return stateObj ;
            return stateObj;
             
           }
+          case actionTypes.SEARCH_PRODUCT :
+            {  let filteredProducts =[] ;
+              let products =[];
+              if (  stateObj.filteredPromotions.length>0 || stateObj.filteredDepartments.length>0)
+              { products = state.currentPageProducts;
+              }
+              else 
+              {
+                products = state.products;
+              }
+              products.map((product,i)=>
+              {   
+                      if ((product.Product_Name).toLowerCase().includes(action.payload.toLowerCase()))
+                      {
+                        filteredProducts.push(product)
+                      }
+                    
+              })
+              stateObj.currentPageProducts =filteredProducts;
+                   
+              return stateObj ; 
+            }
     default:
       return state;
   }
