@@ -1,5 +1,6 @@
 # Code-Challenge-Task
-install mySql , import the database attached in repos in my sql 
+install mySql then import the database attached in repos in mysql 		
+
 -- install nodejs 
 -- clone nodejs project and reactjs project 
 -- change config. of database in server.js file in nodejs project 
